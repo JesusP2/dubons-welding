@@ -1,0 +1,35 @@
+---
+import "@fontsource/noto-sans";
+import "@fontsource/quicksand";
+import "@fontsource/secular-one";
+---
+
+<html>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="generator" content={Astro.generator} />
+  <title>Dubon Welder</title>
+  <body>
+    <nav class="fixed w-full h-20 bg-white bg-opacity-20 backdrop-blur-lg">
+      <div class="mx-auto mt-2 h-16 max-w-7xl flex items-center">
+        <img src="/icon.jpeg" class="w-16 h-16 mr-16" />
+        <ul class="flex gap-x-4">
+          <li>Features</li>
+          <li>Features</li>
+          <li>Features</li>
+          <li>Reviews</li>
+        </ul>
+      </div>
+    </nav>
+    <main class="pt-32">
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style>
+  h1 {
+    font-family: "Secular One", sans-serif;
+  }
+</style>

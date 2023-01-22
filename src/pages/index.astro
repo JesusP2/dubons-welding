@@ -1,81 +1,74 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Services from "../components/services.astro";
+import Testimonial from "../components/Testimonial.astro";
+import Layout from "../layouts/index.astro";
+import { Image } from "@astrojs/image/components";
+import HeroImage from "../../public/hero-image.jpg";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout>
+  <h1 class="font-secular-one text-4xl">
+    Dubon's Welding and Constructions Services, LLC.
+  </h1>
+  <Image src={HeroImage} alt="hero-image" width="1920" height="1300" />
+  <section
+    class="py-24 2xl:py-44 bg-blueGray-100 rounded-t-10xl overflow-hidden max-w-7xl mx-auto"
+  >
+    <Services />
+  </section>
+  <section
+    class="py-24 2xl:py-44 bg-blueGray-100 rounded-t-10xl overflow-hidden max-w-7xl mx-auto"
+  >
+    <div class="container px-4 mx-auto">
+      <Testimonial name="Emily Williams" rating={5} avatar="women">
+        I was extremely impressed with the level of skill and precision
+        demonstrated by the welder on my project. The finished product exceeded
+        my expectations and was completed on time.
+      </Testimonial>
+      <Testimonial name="Michael Smith" rating={5} avatar="men">
+        The welder was very professional and easy to work with. They took the
+        time to understand my needs and made sure that the final product met my
+        specifications.
+      </Testimonial>
+      <Testimonial name="Ashley Garcia" rating={5} avatar="women">
+        I was very pleased with the quality of the welding work performed on my
+        industrial equipment. The welder was able to repair a complex issue
+        quickly and efficiently.
+      </Testimonial>
+      <Testimonial name="Joshua Thompson" rating={5} avatar="men">
+        The welder was very knowledgeable and able to answer all of my questions
+        about the process. They took great care in making sure that the final
+        product was up to code and met safety standards.
+      </Testimonial>
+      <Testimonial name="Samantha Rodriguez" rating={5} avatar="women">
+        I was very impressed with the attention to detail and quality of work
+        provided by the welder. They were able to repair a difficult problem and
+        the final product looked brand new.
+      </Testimonial>
+      <Testimonial name="David Perez" rating={5} avatar="men">
+        The welder was able to complete the job in a timely manner and the final
+        product was of great quality. I would definitely recommend them for any
+        welding needs.
+      </Testimonial>
+      <Testimonial name="Lauren Taylor" rating={5} avatar="women">
+        The welder was very professional and took the time to explain the
+        process and answer any questions I had. I was very pleased with the
+        final product and the level of expertise demonstrated.
+      </Testimonial>
+      <Testimonial name="Matthew Anderson" rating={5} avatar="men">
+        I was extremely satisfied with the welding work done on my project. The
+        welder was able to complete the job to my exact specifications and the
+        final product was of high quality.
+      </Testimonial>
+      <Testimonial name="James Lee" rating={5} avatar="men">
+        The welder was able to complete the job on time and within budget. The
+        final product was of excellent quality and exceeded my expectations.
+      </Testimonial>
+      <Testimonial name="Jennifer Green" rating={5} avatar="women">
+        I was very impressed with the welder's ability to handle a challenging
+        project. They were able to repair and reinforce a critical component of
+        my machinery, and the final product was of top-notch quality.
+      </Testimonial>
+    </div>
+  </section>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
